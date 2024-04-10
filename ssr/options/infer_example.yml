@@ -9,11 +9,12 @@ manual_seed: 0
 
 # Root directory for low-res images you want super-resolved.
 # This can be in any directory structures, but the code expects pngs.
-data_dir: super_resolution_2023-12-08/test_set/sentinel2/
+data_dir: D:/Github/satlas-super-resolution/pngs/low
+#super_resolution_2023-12-08/test_set/sentinel2/
 
 n_lr_images: 8
 
-save_path: testing_infer/
+save_path: D:/Github/satlas-super-resolution/pngs/results
 
 # Structure of the generator you want to use for inference
 network_g:
@@ -26,6 +27,7 @@ network_g:
 
 # Load pretrained weights into the generator that is defined above
 path:
-  pretrain_network_g: experiments/sample_net_g.pth
+  pretrain_network_g: D:/Github/satlas-super-resolution/experiments/esrgan_8S2.pth
+  #experiments/sample_net_g.pth
   param_key_g: params_ema
   strict_load_g: true
